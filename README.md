@@ -1,6 +1,6 @@
-# Blog
+# Algolia-blog
 
-General purpose blog by @Haroenv
+Blog for my internship at Algolia.
 
 # License
 
