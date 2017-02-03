@@ -1,0 +1,10 @@
+---
+layout: post
+---
+{% for photo in page.photos %}
+<figure>
+	<img src="{{ photo.img }}" alt="{{ photo.caption }}">
+	<figcaption>{{ photo.caption }}</figcaption>
+</figure>
+{% endfor %}
+{{content}}

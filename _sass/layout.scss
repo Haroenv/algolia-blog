@@ -1,0 +1,143 @@
+html {
+  font-family: system,-apple-system,Roboto,sans-serif;
+  padding: 1rem;
+  max-width: 56em;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+article {
+  padding: 1em;
+
+  &:nth-of-type(2n) {
+    @extend %shaded;
+    padding: 1em;
+  }
+}
+
+header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+
+  @media all and (max-width: 40em) {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+nav ul{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  padding: 0;
+  li {
+    list-style-type: none;
+    padding: .4em;
+    white-space: nowrap;
+  }
+}
+
+.relative {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.muted {
+  color: $medium;
+  font-size: 0.8em;
+}
+
+code {
+  font-family: Monaco, monospace;
+  @extend %shaded;
+}
+
+img,iframe {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+  transition: border 0.4s ease;
+  border-bottom: 2px solid transparentize($accent, 1);
+
+  &:hover {
+    border-bottom: 2px solid $accent;
+  }
+
+  &.invisible {
+    color: $text;
+    border-bottom: none;
+    transition: none;
+  }
+}
+
+.ext::after {
+  content: '';
+  display: inline-block;
+  height: .7em;
+  width: .7em;
+  margin-left: 2px;
+  background: {
+    image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewbox='100 100 100 100' width='100' height='100'><path fill='none' stroke='" + transparentize($accent,0.001) + /* hack for Firefox */"' stroke-width='10' d='m43,35H5v60h60V57M45,5v10l10,10-30,30 20,20 30-30 10,10h10V5z'/></svg>");
+    repeat: no-repeat;
+    size: contain;
+  }
+}
+
+abbr {
+  border-bottom: 1px dotted $text;
+  cursor: pointer;
+}
+
+figure {
+  text-align: center;
+  margin: 0 auto;
+
+  img, svg, video{
+    width: 100%;
+    height: auto;
+  }
+
+
+  .youtube {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  figcaption {
+    font-style: italic;
+    font-size: 0.8em;
+  }
+
+  &.highlight {
+    text-align: initial;
+  }
+}

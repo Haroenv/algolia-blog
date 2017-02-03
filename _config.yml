@@ -1,0 +1,12 @@
+sass:
+  style: compressed
+permalink: :title
+highlighter: rouge
+markdown: kramdown
+future: true
+kramdown:
+  input: GFM
+  footnote_backlink: '&#8617;&#xfe0e;'
+description: 'My experiences having an internship at Algolia!'
+# url: https://haroen.me/algolia-blog
+url: http://localhost:4000

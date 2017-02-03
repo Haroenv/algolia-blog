@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+  Blog about my things
+  @author Haroen Viaene
+-->
+<html lang="en">
+<head>
+  <title> {{ page.title }} | Haroen's Algolia blog </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#7f1734">
+  <link rel="apple-touch-icon" href="https://haroen.me/apple-touch-icon.png" />
+  <link rel="icon" href="https://haroen.me/apple-touch-icon.png">
+  <meta name="author" content="Haroen Viaene" />
+  <link rel="stylesheet" href="{{site.url}}/style.css" />
+  <link rel="icon" type="image/png" href="https://haroen.me/favicon.png" />
+
+  <meta name="description" content="{{ page.content | markdownify | normalize_whitespace | strip_html | truncatewords: 50 }}" />
+  <meta name="og:description" content="{{ page.content | markdownify | normalize_whitespace | strip_html | truncatewords: 50 }}" />
+  <meta name="twitter:description" content="{{ page.content | markdownify | normalize_whitespace | strip_html | truncatewords: 50 }}" />
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:site" content="@haroenv">
+  <meta property="og:title" content="Haroen's blog: {{page.title}}" />
+  <meta property="twitter:title" content="Haroen's blog: {{page.title}}" />
+  <meta name="og:image" content="https://haroen.me/apple-touch-icon.png">
+  <meta name="twitter:image" content="https://haroen.me/apple-touch-icon.png">
+</head>
+<body>
+
+  <header>
+    <h1><a href="{{site.url}}/">Haroen's Algolia blog</a> | {{ page.title }}</h1>
+    <nav>
+      <ul>
+        <li><a href="{{site.url}}/">Home</a></li>
+        <li><a href="{{site.url}}/tags">Tags</a></li>
+        <li><a href="https://haroen.me/" class="ext">About Me</a></li>
+        <li><a href="https://twitter.com/haroenv" class="ext">Twitter</a></li>
+      </ul>
+    </nav>
+  </header>
