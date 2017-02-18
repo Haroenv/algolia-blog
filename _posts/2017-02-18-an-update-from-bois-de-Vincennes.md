@@ -1,5 +1,6 @@
 ---
 title: An update from Bois de Vincennes
+date: 2017-02-18 15:50
 layout: post
 ---
 Time goes so fast when you're busy, already two weeks over. I've been working on two sides. On one hand I am getting into improving [react-instantearch](https://community.algolia.com/instantsearch.js/react/), and on the other I'm busy improving the search experience of [yarn](https://yarnpkg.com/search). 
