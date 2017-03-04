@@ -11,10 +11,12 @@ Regarding the Yarn website first there were some interesting small improvements 
 
 But what took off even more was the search queries. Let's take a look at this graph:
 
-<figure>
-	<img alt="Algolia search stats" src="{{site.baseurl}}/img/posts{{page.url}}/stats.png" />
-	<figcaption>Search numbers up to Tuesday at the end of the day</figcaption>
-</figure>
+{% include
+	image.html
+	img='stats.png'
+	alt='Algolia search stats'
+	caption='Search numbers up to Tuesday at the end of the day' 
+%}
 
 We see that instead of the usual 1000 searches in the weekend, we are getting about 20000, monday was even more impressive with close to 40000 searches. Let's hope this growth stays, but even if it would calm down, I'm pretty sure the status quo would still be above the regular numbers. 
 
